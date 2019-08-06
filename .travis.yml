@@ -6,17 +6,17 @@ services:
 - docker
 
 jobs:
-  include:
-    - after_deploy:
+   include:
+      - after_deploy:
            - echo "done deploying"
-    - stage: deploy
-      deploy:
-          provider: elasticbeanstalk
-          access_key_id: $accesskey
-	  secret_access_key: $secretkey
-          region: $region
-          app: $ebapp
-          env: $ebenv
-          bucket_name: travistest-eu-west-2-test
-          on:
-           branch: master
+      - stage: deploy
+             deploy:
+                provider: elasticbeanstalk
+                access_key_id: $accesskey
+	        secret_access_key: $secretkey
+                region: $region
+                app: $ebapp
+                env: $ebenv
+                bucket_name: travistest-eu-west-2-test
+                on:
+                 branch: master
