@@ -9,7 +9,7 @@ port = process.env.PORT || 8080;
 // Catch all other routes and return the index file
 app.get('/', (req, res) => {
 <<<<<<< HEAD
-  res.send("hello world!! prod new");
+  res.send("hello world!!");
 =======
   res.send("hello world!!");
 >>>>>>> release-1
